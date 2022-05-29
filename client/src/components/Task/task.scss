@@ -1,0 +1,142 @@
+.task {
+    display: flex;
+    flex-flow: column;
+    align-items: center ;
+    min-height: 550px;
+    width: 1000px;
+    background: #F1F1F1;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 0px rgba(50, 50, 50, 0.178);
+    padding: 20px 0;
+}
+
+.task__delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -22px;
+    right: 50px;
+    height: 55px;
+    width: 55px;
+    border-radius: 50px;
+    background-color: #EB5E5E;
+    z-index: 5;
+    transition: 0.2s ease all;
+    font-size: 0.8rem;
+    cursor: pointer;
+    &:hover {
+        transform: scale(0.93);
+    }
+}
+
+.task__phase {
+    display: flex;
+    flex-flow: column;
+    width: 95%;
+
+    h3 {
+        font-size: 2.3rem;
+    }
+}
+
+.tasklist {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.taskitem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: max-content;
+
+    span {
+        font-size: 1.2rem;
+        margin-left: 8px;
+    }
+
+    &:hover > div {
+        background-color: #d3d3d3;
+    }
+}
+
+.taskitem__done {
+    text-decoration: line-through;
+    color: rgba(17, 17, 17, 0.678);
+
+    div {
+        background-color: #00FF0A;
+    }
+}
+
+.taskitem__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    border: 1px solid #111;
+    transition: 0.1s ease all;
+}
+
+@media screen and (max-width: 1200px) {
+    .task {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .task {
+        width: 90%;
+    }
+    .task__phase {
+        h3 {
+            font-size: 1.9rem;
+        }
+    }
+    .task__buttons {
+        display: flex;
+        width: 110px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .task__delete {
+        position: initial;
+        height: 45px;
+        width: 45px;
+        margin-bottom: 20px;
+        &:hover {
+            transform: scale(1);
+        }
+    }
+    .taskitem {
+        span {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .task__phase {
+        h3 {
+            font-size: 1.6rem;
+        }
+    }
+    .taskitem {
+        span {
+            font-size: 1rem;
+            margin-left: 5px;
+        }
+    }
+    .taskitem__circle {
+        height: 17px;
+        width: 17px;
+    }
+}
+
