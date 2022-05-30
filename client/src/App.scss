@@ -77,7 +77,6 @@ html {
   select {
     margin-left: 5px;
     border: 1px solid rgba(17, 17, 17, 0.144);
-    -webkit-appearance: none;
   }
 }
 
@@ -137,6 +136,8 @@ html {
     }
     select {
       width: 30%;
+    -webkit-appearance: none;
+      padding: 0 10px;
     }
   }  
 }
