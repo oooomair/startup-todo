@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const getTasksAsync = createAsyncThunk(
   'task/getTasksAsync',
   async () => {
-    const res = await fetch('http://localhost:5000/tasks')
+    const res = await fetch('https://startup-todo.herokuapp.com/tasks')
     if (res.ok) {
       const tasks = await res.json()
       return {tasks}
@@ -16,7 +16,7 @@ export const getTasksAsync = createAsyncThunk(
   export const addTaskAsync = createAsyncThunk(
     'task/addTaskAsync',
     async payload => {
-      const res = await fetch('http://localhost:5000/tasks', {
+      const res = await fetch('https://startup-todo.herokuapp.com/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ export const getTasksAsync = createAsyncThunk(
   export const deleteTaskAsync = createAsyncThunk(
     'task/deleteTaskAsync',
     async (payload) => {
-      const res = await fetch(`http://localhost:5000/tasks/${payload.id}`, {
+      const res = await fetch(`https://startup-todo.herokuapp.com/tasks/${payload.id}`, {
         method: 'DELETE',
       });
   
@@ -47,7 +47,7 @@ export const getTasksAsync = createAsyncThunk(
   export const updateTaskAsync = createAsyncThunk(
     'task/updateTaskAsync',
     async (payload) => {
-      const res = await fetch(`http://localhost:5000/tasks/${payload.id}`, {
+      const res = await fetch(`https://startup-todo.herokuapp.com/tasks/${payload.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
