@@ -67,9 +67,6 @@ export const tasksSlice = createSlice({
   name: "tasks",
   initialState: [],
   reducers: {
-    addTasks: (state, { payload }) => { 
-      state.tasks = payload 
-    }
   },
   extraReducers: {
 		[getTasksAsync.fulfilled]: (state, action) => {
