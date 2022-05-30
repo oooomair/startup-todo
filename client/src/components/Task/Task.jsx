@@ -20,6 +20,8 @@ const Task = () => {
 
   const FoundationTasksLeft = foundationTasks.filter(task => task.completed === false)
 
+  console.log(FoundationTasksLeft.length);
+
   useEffect(() => {
     dispatch(getTasksAsync())
   }, [dispatch])

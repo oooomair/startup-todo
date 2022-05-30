@@ -19,7 +19,7 @@ const TaskItem = ({ task, id, completed }) => {
 	};
 
   return (
-    <div onClick={!deleteItem ? updateTask : ''} className={`${completed && 'taskitem__done'} taskitem`}>
+    <div onClick={!deleteItem ? updateTask : null} className={`${completed && 'taskitem__done'} taskitem`}>
       {deleteItem ? <div onClick={deleteTask} style={{backgroundColor: '#EB5E5E'}} className="taskitem__circle"><FiMinus/></div> : <div className="taskitem__circle"></div>}
       <span >{task}</span>
     </div>
