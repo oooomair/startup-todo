@@ -61,7 +61,6 @@ const Task = () => {
             <h3>Delivery</h3>
             <TaskList onDone={onDone} tasks={deliveryTasks} />
           </div>
-          {}
     </div>
   )
 }
